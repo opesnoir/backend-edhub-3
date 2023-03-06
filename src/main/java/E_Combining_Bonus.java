@@ -13,6 +13,23 @@ public class E_Combining_Bonus {
     //
     // implementeer een forloop die alle even nummers print. Je gebruikt hiervoor ook een if statement
 
+    //Als je wilt controleren of een getal deelbaar is door 2, moet je de modulus-operator gebruiken met het getal 2 en controleren of het resultaat gelijk is aan 0.
+    //Dus in plaats van "(numbers[i] % 2 = 0)" zou je moeten schrijven "(numbers[i] % 2 == 0)". Het dubbele gelijkteken wordt gebruikt om een vergelijking te maken in plaats van een toekenning.
+    for (int i = 0; i < numbers.length; i++) {
+      if (numbers[i] % 2 == 0){
+        System.out.println(numbers[i]);
+      }else {
+        System.out.println("Het betreft een oneven getal");
+      }
+    }
+// dit is ook mogelijk
+/*    for (int i = 0; i < numbers.length; i++) {
+      if (numbers[i] % 2 != 0){
+        System.out.println("het betreft een oneven getal");
+      } else {
+        System.out.println(numbers[i]);
+      }
+    }*/
 
 
     //
@@ -25,6 +42,11 @@ public class E_Combining_Bonus {
     int accumulator = 0;
     //add while
 
+    // accumulator += numbers[index]; is een verkorte schrijfwijze van accumulator = accumulator + numbers[index];. Dit betekent dat we de waarde van de huidige accumulator variabele verhogen met de waarde van het element in de lijst dat zich bevindt op de index index. We gebruiken de += operator om deze berekening te maken en de nieuwe waarde toe te wijzen aan de accumulator variabele.
+
+   while (index < numbers.length && accumulator < 400)
+     accumulator += numbers[index];
+     index++; // update index
     System.out.println(accumulator);
 
   }

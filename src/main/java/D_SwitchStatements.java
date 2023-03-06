@@ -11,8 +11,13 @@ public class D_SwitchStatements {
     switch (y) {
       case 1:
         System.out.println("=one");
+        break;
+      case 2:
         System.out.println("=two");
+        break;
+      default:
         System.out.println("!=one && !=two");
+        break;
     }
 
 
@@ -24,7 +29,22 @@ public class D_SwitchStatements {
     // PepsiCo maakt Pepsi,7Up en Mountain Dew
     // Implementeer een switch statement dat, gegeven het drankje, het merk print.
     // Bij geen resultaat print het statement "onbekend".
-    String drink = "Mountain Dew";
+    String drink = "Fanta";
 
+    switch (drink){
+      case "Cola":
+      case "Fanta":
+      case "Sprite":
+        System.out.println("Coca-cola");
+        break;
+      case "Pepsi":
+      case "7up":
+      case "Mountain Dew":
+        System.out.println("PepsiCo");
+        break;
+      default:
+        System.out.println("Onbekend");
+        break;
+    }
   }
 }
